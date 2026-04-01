@@ -1,5 +1,15 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Portfolio customization (start here)
+
+- **Main page content**: `app/page.tsx`
+  - Replace the placeholders for **name**, **headline**, **about**, **projects**, **experience**, **links**, and **email**.
+  - Project images: put files in `public/images/` and update each card’s `imageSrc`.
+  - Portrait: swap `/images/avatar-placeholder.svg` for your real headshot path.
+- **Site title + SEO description**: `app/layout.tsx` (`metadata`)
+- **Colors / theme tokens**: `app/globals.css` (`:root` + `html[data-theme="dark"]`)
+- **Resume download button**: add `public/resume.pdf` (then the header button works as-is)
+
 ## Getting Started
 
 First, run the development server:
@@ -34,3 +44,9 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+### Suggested Vercel flow (this repo)
+
+- Push this project to GitHub
+- Import the repo in Vercel (framework preset should auto-detect Next.js)
+- Deploy (no special env vars required for the current template)

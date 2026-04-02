@@ -29,12 +29,12 @@ export default function Home() {
             className="group inline-flex items-center gap-3 rounded-full border border-foreground/10 bg-surface/70 px-3 py-2 shadow-sm transition hover:border-foreground/20"
           >
             <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-navy text-sm font-black text-white">
-              YOU
+              M
             </span>
             <span className="pr-2 text-sm font-black tracking-tight text-foreground">
-              Your Name
+              Mitul Marimuthu
               <span className="mt-0.5 block text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-muted">
-                Portfolio
+                AI · Software Engineering
               </span>
             </span>
           </a>
@@ -74,7 +74,7 @@ export default function Home() {
 
             <div className="space-y-5">
               <h1 className="text-balance text-4xl font-black tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-                Build products that feel{" "}
+                Build agentic AI systems that feel{" "}
                 <span className="relative">
                   inevitable
                   <span className="absolute -inset-x-1 -bottom-2 h-3 rounded-full bg-gold/35" />
@@ -82,9 +82,9 @@ export default function Home() {
                 .
               </h1>
               <p className="max-w-2xl text-pretty text-lg leading-8 text-muted md:text-xl">
-                Replace this sentence with your positioning statement: what you
-                do, who you help, and the outcomes you deliver. Keep it sharp—2
-                lines max.
+                Software engineer focused on agentic AI and product reliability. I
+                ship web apps and data-driven features with Next.js, Python, SQL,
+                and LangChain/LangGraph—measured by real user impact.
               </p>
             </div>
 
@@ -103,11 +103,11 @@ export default function Home() {
               </a>
             </div>
 
-            <PlaceholderBox title="Where to edit headline + intro copy">
+            <PlaceholderBox title="Images: where to add yours">
               <p>
-                Update the hero headline and paragraph in{" "}
-                <span className="font-semibold text-foreground">app/page.tsx</span>{" "}
-                (search for “Replace this sentence”).
+                Replace <span className="font-semibold text-foreground">avatar-placeholder.svg</span>{" "}
+                with your photo in <span className="font-semibold text-foreground">public/images/</span>.
+                Then update project screenshots in the <span className="font-semibold text-foreground">Projects</span> section.
               </p>
             </PlaceholderBox>
           </div>
@@ -142,9 +142,9 @@ export default function Home() {
 
               <div className="mt-6 grid gap-3 sm:grid-cols-3">
                 {[
-                  { k: "Role", v: "Your title" },
-                  { k: "Location", v: "City, ST" },
-                  { k: "Focus", v: "Your niche" },
+                  { k: "Role", v: "AI + Software Engineer" },
+                  { k: "Location", v: "Santa Barbara, CA" },
+                  { k: "Focus", v: "Agentic AI · Web Systems" },
                 ].map((item) => (
                   <div
                     key={item.k}
@@ -182,20 +182,26 @@ export default function Home() {
           <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
             <div className="section-card space-y-5 rounded-3xl p-7 md:p-8">
               <h3 className="text-lg font-black text-foreground">
-                Replace with 2–3 short paragraphs
+                UCSB CS student, shipping measurable impact
               </h3>
               <div className="space-y-4 text-sm leading-7 text-muted md:text-base">
                 <p>
-                  Paragraph 1: who you are + what you&apos;re great at (systems,
-                  UX, ML, infra—whatever is true).
+                  University of California, Santa Barbara — B.S. in Computer
+                  Science (Grad: June 2027, GPA: 3.95/4.0). Relevant coursework:
+                  Data Structures & Algorithms, Computer Architecture, Operating
+                  Systems, Artificial Intelligence, Cryptography, and more.
                 </p>
                 <p>
-                  Paragraph 2: a proof point (scope/scale), and what you enjoy
-                  most about building.
+                  I focus on building agentic AI and data-driven web features end
+                  to end—turning prototypes into shipped product work. My
+                  approach is always outcome-first: faster onboarding, cheaper
+                  retrieval, and fewer user friction points backed by real data.
                 </p>
                 <p>
-                  Paragraph 3 (optional): values, collaboration style, and what
-                  you&apos;re looking for next.
+                  In leadership roles, I build teams and learning paths: organizing
+                  PokerBots with 250 participants (and a Next.js + Supabase
+                  realtime competition interface), and directing agentic dashboard
+                  development to accelerate the product lifecycle by 50%.
                 </p>
               </div>
             </div>
@@ -219,17 +225,23 @@ export default function Home() {
               <div className="section-card rounded-3xl p-7 md:p-8">
                 <h3 className="text-lg font-black text-foreground">Skills</h3>
                 <p className="mt-2 text-sm text-muted">
-                  Swap these chips for your real stack (keep it honest).
+                  Core technical stack (swap/add as you grow).
                 </p>
                 <div className="mt-5 flex flex-wrap gap-2">
                   {[
-                    "TypeScript",
-                    "React / Next.js",
-                    "Node",
-                    "PostgreSQL",
-                    "Tailwind",
-                    "AWS",
                     "Python",
+                    "TypeScript",
+                    "JavaScript",
+                    "React / Next.js",
+                    "SQL",
+                    "Flask",
+                    "MongoDB",
+                    "Supabase",
+                    "Docker",
+                    "LangChain",
+                    "LangGraph",
+                    "PyTorch",
+                    "Hugging Face",
                   ].map((skill) => (
                     <span
                       key={skill}
@@ -251,44 +263,31 @@ export default function Home() {
                 Projects
               </p>
               <h2 className="text-balance text-3xl font-black tracking-tight text-foreground md:text-4xl">
-                Proof beats promises.
+                Projects with real tradeoffs
               </h2>
             </div>
-            <PlaceholderBox title="How to swap screenshots">
+            <PlaceholderBox title="Images: screenshot placeholders">
               <p>
-                Replace each card&apos;s{" "}
-                <span className="font-semibold text-foreground">imageSrc</span>{" "}
-                in{" "}
-                <span className="font-semibold text-foreground">app/page.tsx</span>
-                . Use crisp 16:9 images for best results.
+                Upload your screenshots in <span className="font-semibold text-foreground">public/images/</span> and update
+                each project card&apos;s <span className="font-semibold text-foreground">imageSrc</span>. The current images use a generic placeholder.
               </p>
             </PlaceholderBox>
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-3">
+          <div className="grid gap-6 lg:grid-cols-2">
             <ProjectCard
-              title="Project Alpha"
-              description="One sentence on the problem. One sentence on what you shipped and the measurable outcome."
-              tech="Next.js · Postgres · Tailwind"
+              title="SpotiGraph"
+              description="Built a SQL-backed system for 1,000+ Spotify listening records. Optimized queries to reduce retrieval time by 30%, improving user satisfaction by 20%, and added instant timeframe toggles with instant UI updates."
+              tech="Python · React · Next.js · SQL · Flask"
               imageSrc="/images/project-placeholder.svg"
-              imageAlt="Project Alpha screenshot placeholder"
-              href="https://github.com/"
+              imageAlt="SpotiGraph screenshot placeholder"
             />
             <ProjectCard
-              title="Project Beta"
-              description="Focus on scope: users impacted, latency improved, revenue influenced, time saved—whatever is credible."
-              tech="Python · FastAPI · Redis"
+              title="BangEditor"
+              description="Engineered an image transformation web app using Cloudinary to support 15+ cloud-based transformations. Created 10+ reusable UI components in TypeScript and designed a MongoDB schema for 500+ transformations to enable near-instant retrieval and state reverts."
+              tech="JavaScript · TypeScript · Next.js · Cloudinary · MongoDB"
               imageSrc="/images/project-placeholder.svg"
-              imageAlt="Project Beta screenshot placeholder"
-              href="https://github.com/"
-            />
-            <ProjectCard
-              title="Project Gamma"
-              description="If it’s private, link to a case study PDF or describe architecture without exposing secrets."
-              tech="AWS · Terraform · Observability"
-              imageSrc="/images/project-placeholder.svg"
-              imageAlt="Project Gamma screenshot placeholder"
-              href="https://github.com/"
+              imageAlt="BangEditor screenshot placeholder"
             />
           </div>
         </section>
@@ -306,21 +305,38 @@ export default function Home() {
           <div className="grid gap-5">
             {[
               {
-                title: "Your Role @ Company",
-                meta: "2023 — Present · City, ST",
+                title: "Software Engineering Intern · Yope",
+                meta: "Dec 2025 — March 2026 · Remote",
                 bullets: [
-                  "Outcome-first bullet (metric + what you changed).",
-                  "Technical depth bullet (systems/tools).",
-                  "Leadership/collab bullet (how you worked).",
+                  "Ideated, prototyped, and delivered 3 core app features, driving a 30% increase in US download rates.",
+                  "Owned milestone planning across a 5-person engineering team; compiled technical documentation and wrote OKRs, improving sprint velocity by 15%.",
+                  "Presented insights from 100+ user interviews, identifying and resolving 4 critical friction points, resulting in a $15k increase in monthly recurring revenue.",
                 ],
               },
               {
-                title: "Previous Role @ Company",
-                meta: "2020 — 2023 · Remote",
+                title: "Software Engineering Intern · smartQED",
+                meta: "Jun 2025 — Sept 2025 · Remote",
                 bullets: [
-                  "Replace with real achievements (avoid vague responsibilities).",
-                  "If you can’t share numbers, use ranges or qualitative impact.",
-                  "Keep each bullet one line when possible.",
+                  "Automated client onboarding and 2 core services via an AI agent, cutting average service time by 30%.",
+                  "Implemented Retrieval-Augmented Generation (RAG) to search through 200+ client cases, reducing servicing costs for 30 new clients by 40%.",
+                  "Researched 10 agentic AI architectures, implemented proof-of-concepts with 95% accuracy, and compiled results into a detailed 20-page design document.",
+                ],
+              },
+              {
+                title: "Technical Director · ACM (UCSB)",
+                meta: "Jan 2025 — Present · Santa Barbara, CA",
+                bullets: [
+                  "Organized PokerBots, a school-wide poker AI agent competition with 250 participants and 7 industry guest speakers.",
+                  "Developed a Next.js + Supabase realtime interface for contestants, supporting 80+ bots and 300+ spectators over 4 hours.",
+                  "Led sponsorship outreach by automating cold email campaigns with Python, reaching 120+ companies and securing 3 partnerships (+$9k funding).",
+                ],
+              },
+              {
+                title: "Software Engineering Director · AgentsSB",
+                meta: "Sept 2025 — Present · Santa Barbara, CA",
+                bullets: [
+                  "Directed a 6-person team to develop 4 AI-powered dashboards, leveraging agentic development environments to accelerate the product lifecycle by 50%.",
+                  "Established a curriculum centralized on Claude Code and Codex subagents, enabling 60+ members to start deploying industry-level code.",
                 ],
               },
             ].map((job) => (
@@ -334,9 +350,6 @@ export default function Home() {
                       {job.meta}
                     </p>
                   </div>
-                  <span className="inline-flex w-fit items-center rounded-full bg-gold/15 px-3 py-1 text-xs font-black text-gold">
-                    Edit in page.tsx
-                  </span>
                 </div>
                 <ul className="mt-6 space-y-3 text-sm leading-7 text-muted md:text-base">
                   {job.bullets.map((b) => (
@@ -361,29 +374,26 @@ export default function Home() {
                 Let&apos;s build something sharp.
               </h2>
               <p className="text-sm leading-7 text-muted md:text-base">
-                Replace the links with your real profiles. For the form: easiest
-                v1 is{" "}
+                For collaborations, reach me at{" "}
                 <a
                   className="font-semibold text-foreground underline decoration-gold/60 underline-offset-4 hover:decoration-gold"
-                  href="https://formspree.io/"
-                  target="_blank"
-                  rel="noreferrer"
+                  href="mailto:mitul6m16apply@gmail.com"
                 >
-                  Formspree
+                  mitul6m16apply@gmail.com
                 </a>{" "}
-                or a serverless endpoint later.
+                or connect via LinkedIn/GitHub below.
               </p>
 
               <div className="flex flex-col gap-3 sm:flex-row">
                 <a
                   className="inline-flex items-center justify-center rounded-full bg-navy-deep px-6 py-3 text-sm font-black text-white shadow-[0_22px_60px_rgba(0,24,69,0.35)] transition hover:brightness-110"
-                  href="mailto:you@email.com"
+                  href="mailto:mitul6m16apply@gmail.com"
                 >
-                  Email you@email.com
+                  Email mitul6m16apply@gmail.com
                 </a>
                 <a
                   className="inline-flex items-center justify-center rounded-full border border-foreground/15 bg-surface/70 px-6 py-3 text-sm font-black text-foreground transition hover:border-foreground/25"
-                  href="https://www.linkedin.com/"
+                  href="https://linkedin.com/in/mitul-marimuthu"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -391,7 +401,7 @@ export default function Home() {
                 </a>
                 <a
                   className="inline-flex items-center justify-center rounded-full border border-foreground/15 bg-surface/70 px-6 py-3 text-sm font-black text-foreground transition hover:border-foreground/25"
-                  href="https://github.com/"
+                  href="https://github.com/Mitul-Marimuthu"
                   target="_blank"
                   rel="noreferrer"
                 >

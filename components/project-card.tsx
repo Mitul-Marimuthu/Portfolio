@@ -17,7 +17,7 @@ export function ProjectCard({
 }) {
   const body = (
     <article className="section-card group overflow-hidden rounded-3xl transition hover:-translate-y-0.5 hover:shadow-[0_26px_70px_rgba(0,26,69,0.28)]">
-      <div className="relative h-44 w-full overflow-hidden bg-navy-deep/10">
+      <div className="relative h-44 w-full overflow-hidden bg-fill-navy/10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,color-mix(in_srgb,var(--gold)35%,transparent),transparent_55%),radial-gradient(circle_at_80%_10%,color-mix(in_srgb,var(--navy)35%,transparent),transparent_55%)]" />
         <Image
           src={imageSrc}

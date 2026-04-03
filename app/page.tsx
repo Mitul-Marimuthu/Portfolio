@@ -28,7 +28,7 @@ export default function Home() {
             href="#top"
             className="group inline-flex items-center gap-3 rounded-full border border-foreground/10 bg-surface/70 px-3 py-2 shadow-sm transition hover:border-foreground/20"
           >
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-navy text-sm font-black text-white">
+            <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-fill-navy text-sm font-black text-white">
               M
             </span>
             <span className="pr-2 text-sm font-black tracking-tight text-foreground">
@@ -54,7 +54,7 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <a
               href="/resume.pdf"
-              className="hidden rounded-full bg-gold px-4 py-2 text-sm font-black text-navy-deep shadow-[0_16px_40px_rgba(255,184,28,0.25)] transition hover:brightness-110 sm:inline-flex"
+              className="hidden rounded-full bg-gold px-4 py-2 text-sm font-black text-on-gold shadow-[0_16px_40px_rgba(255,184,28,0.25)] transition hover:brightness-110 sm:inline-flex"
             >
               Resume
             </a>
@@ -91,7 +91,7 @@ export default function Home() {
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
                 href="#projects"
-                className="inline-flex items-center justify-center rounded-full bg-navy-deep px-6 py-3 text-sm font-black text-white shadow-[0_22px_60px_rgba(0,24,69,0.35)] transition hover:brightness-110"
+                className="inline-flex items-center justify-center rounded-full bg-fill-navy px-6 py-3 text-sm font-black text-white shadow-[0_22px_60px_rgba(0,24,69,0.35)] transition hover:brightness-110"
               >
                 See selected work
               </a>
@@ -130,7 +130,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="relative mt-6 aspect-square w-full overflow-hidden rounded-[2rem] border border-foreground/10 bg-navy-deep/5">
+              <div className="relative mt-6 aspect-square w-full overflow-hidden rounded-[2rem] border border-foreground/10 bg-fill-navy/10">
                 <Image
                   src="/images/avatar-placeholder.svg"
                   alt="Portrait placeholder"
@@ -140,11 +140,11 @@ export default function Home() {
                 />
               </div>
 
-              <div className="mt-6 grid gap-3 sm:grid-cols-3">
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 {[
                   { k: "Role", v: "AI + Software Engineer" },
-                  { k: "Location", v: "Santa Barbara, CA" },
-                  { k: "Focus", v: "Agentic AI · Web Systems" },
+                  { k: "Location", v: "San Jose, CA" },
+                  // { k: "Focus", v: "Agentic AI · Web Systems" },
                 ].map((item) => (
                   <div
                     key={item.k}
@@ -307,6 +307,8 @@ export default function Home() {
               {
                 title: "Software Engineering Intern · Yope",
                 meta: "Dec 2025 — March 2026 · Remote",
+                logoSrc: "/images/experience-logo-placeholder.svg",
+                logoAlt: "Yope logo — replace with /images/logos/yope.*",
                 bullets: [
                   "Ideated, prototyped, and delivered 3 core app features, driving a 30% increase in US download rates.",
                   "Owned milestone planning across a 5-person engineering team; compiled technical documentation and wrote OKRs, improving sprint velocity by 15%.",
@@ -316,6 +318,8 @@ export default function Home() {
               {
                 title: "Software Engineering Intern · smartQED",
                 meta: "Jun 2025 — Sept 2025 · Remote",
+                logoSrc: "/images/experience-logo-placeholder.svg",
+                logoAlt: "smartQED logo — replace with /images/logos/smartqed.*",
                 bullets: [
                   "Automated client onboarding and 2 core services via an AI agent, cutting average service time by 30%.",
                   "Implemented Retrieval-Augmented Generation (RAG) to search through 200+ client cases, reducing servicing costs for 30 new clients by 40%.",
@@ -325,6 +329,8 @@ export default function Home() {
               {
                 title: "Technical Director · ACM (UCSB)",
                 meta: "Jan 2025 — Present · Santa Barbara, CA",
+                logoSrc: "/images/experience-logo-placeholder.svg",
+                logoAlt: "ACM logo — replace with /images/logos/acm-ucsb.*",
                 bullets: [
                   "Organized PokerBots, a school-wide poker AI agent competition with 250 participants and 7 industry guest speakers.",
                   "Developed a Next.js + Supabase realtime interface for contestants, supporting 80+ bots and 300+ spectators over 4 hours.",
@@ -334,6 +340,8 @@ export default function Home() {
               {
                 title: "Software Engineering Director · AgentsSB",
                 meta: "Sept 2025 — Present · Santa Barbara, CA",
+                logoSrc: "/images/experience-logo-placeholder.svg",
+                logoAlt: "AgentsSB logo — replace with /images/logos/agentssb.*",
                 bullets: [
                   "Directed a 6-person team to develop 4 AI-powered dashboards, leveraging agentic development environments to accelerate the product lifecycle by 50%.",
                   "Established a curriculum centralized on Claude Code and Codex subagents, enabling 60+ members to start deploying industry-level code.",
@@ -341,14 +349,26 @@ export default function Home() {
               },
             ].map((job) => (
               <div key={job.title} className="section-card rounded-3xl p-7 md:p-8">
-                <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
-                  <div>
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                  <div className="min-w-0 flex-1 pr-0 sm:pr-4">
                     <h3 className="text-xl font-black tracking-tight text-foreground">
                       {job.title}
                     </h3>
                     <p className="mt-2 text-sm font-semibold text-muted">
                       {job.meta}
                     </p>
+                  </div>
+                  <div
+                    className="relative h-16 w-16 shrink-0 overflow-hidden rounded-2xl border border-dashed border-foreground/20 bg-background/50 sm:ml-auto"
+                    title="Drop a square-ish logo in public/images/logos/ and set logoSrc on this role"
+                  >
+                    <Image
+                      src={job.logoSrc}
+                      alt={job.logoAlt}
+                      fill
+                      sizes="64px"
+                      className="object-contain p-2"
+                    />
                   </div>
                 </div>
                 <ul className="mt-6 space-y-3 text-sm leading-7 text-muted md:text-base">
@@ -386,7 +406,7 @@ export default function Home() {
 
               <div className="flex flex-col gap-3 sm:flex-row">
                 <a
-                  className="inline-flex items-center justify-center rounded-full bg-navy-deep px-6 py-3 text-sm font-black text-white shadow-[0_22px_60px_rgba(0,24,69,0.35)] transition hover:brightness-110"
+                  className="inline-flex items-center justify-center rounded-full bg-fill-navy px-6 py-3 text-sm font-black text-white shadow-[0_22px_60px_rgba(0,24,69,0.35)] transition hover:brightness-110"
                   href="mailto:mitul6m16apply@gmail.com"
                 >
                   Email mitul6m16apply@gmail.com
@@ -442,7 +462,7 @@ export default function Home() {
               </label>
               <button
                 type="button"
-                className="w-full rounded-full bg-gold px-6 py-3 text-sm font-black text-navy-deep shadow-[0_16px_40px_rgba(255,184,28,0.25)] transition hover:brightness-110"
+                className="w-full rounded-full bg-gold px-6 py-3 text-sm font-black text-on-gold shadow-[0_16px_40px_rgba(255,184,28,0.25)] transition hover:brightness-110"
               >
                 Wire this button up (Formspree/API route)
               </button>

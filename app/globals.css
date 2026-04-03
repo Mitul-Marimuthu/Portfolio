@@ -11,6 +11,10 @@ html {
   --muted: #2e3f66;
   --navy: #003660;
   --navy-deep: #001845;
+  /* Solid fills (buttons, avatars): stays dark in both themes so white label text stays readable */
+  --fill-navy: #001845;
+  /* Text on gold buttons: fixed ink color (do not use theme-shifted navy-deep) */
+  --on-gold: #001845;
   --gold: #ffb81c;
   --gold-soft: #ffd166;
   --ring: #f5c242;
@@ -23,6 +27,8 @@ html {
   --color-muted: var(--muted);
   --color-navy: var(--navy);
   --color-navy-deep: var(--navy-deep);
+  --color-fill-navy: var(--fill-navy);
+  --color-on-gold: var(--on-gold);
   --color-gold: var(--gold);
   --color-gold-soft: var(--gold-soft);
   --color-ring: var(--ring);
@@ -37,6 +43,7 @@ html[data-theme="dark"] {
   --muted: #c9d4ea;
   --navy: #89b6ff;
   --navy-deep: #dce9ff;
+  --fill-navy: #0c274d;
   --gold: #ffca4d;
   --gold-soft: #ffe39a;
   --ring: #ffd978;

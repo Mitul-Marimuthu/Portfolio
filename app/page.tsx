@@ -66,12 +66,6 @@ export default function Home() {
       <main id="top" className="mx-auto w-full max-w-6xl space-y-24 px-6 pb-24 pt-10 md:space-y-28 md:pb-32 md:pt-14">
         <section className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
           <div className="space-y-7">
-            <p className="inline-flex items-center gap-2 rounded-full border border-foreground/10 bg-surface/70 px-4 py-2 text-xs font-black uppercase tracking-[0.28em] text-gold shadow-sm">
-              Bold · Navy · Gold
-              <span className="text-foreground/50">|</span>
-              UCSB-inspired palette
-            </p>
-
             <div className="space-y-5">
               <h1 className="text-balance text-4xl font-black tracking-tight text-foreground sm:text-5xl lg:text-6xl">
                 Build agentic AI systems that feel{" "}
@@ -102,14 +96,6 @@ export default function Home() {
                 Let&apos;s collaborate
               </a>
             </div>
-
-            <PlaceholderBox title="Images: where to add yours">
-              <p>
-                Replace <span className="font-semibold text-foreground">avatar-placeholder.svg</span>{" "}
-                with your photo in <span className="font-semibold text-foreground">public/images/</span>.
-                Then update project screenshots in the <span className="font-semibold text-foreground">Projects</span> section.
-              </p>
-            </PlaceholderBox>
           </div>
 
           <div className="relative">

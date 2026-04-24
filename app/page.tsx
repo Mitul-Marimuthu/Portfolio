@@ -1,7 +1,9 @@
 import Image from "next/image";
 
-import { PlaceholderBox } from "@/components/placeholder-box";
+import { ContactForm } from "@/components/contact-form";
+import { MobileNav } from "@/components/mobile-nav";
 import { ProjectCard } from "@/components/project-card";
+import { SkillsSection } from "@/components/skills-section";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 const nav = [
@@ -59,11 +61,14 @@ export default function Home() {
               Resume
             </a>
             <ThemeToggle />
+            <MobileNav />
           </div>
         </div>
       </header>
 
       <main id="top" className="mx-auto w-full max-w-6xl space-y-24 px-6 pb-24 pt-10 md:space-y-28 md:pb-32 md:pt-14">
+
+        {/* ── Hero ── */}
         <section className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
           <div className="space-y-7">
             <div className="space-y-5">
@@ -102,24 +107,20 @@ export default function Home() {
             <div className="absolute -inset-6 -z-10 rounded-[2.5rem] bg-[conic-gradient(from_180deg_at_50%_50%,color-mix(in_srgb,var(--gold)35%,transparent),transparent_40%,color-mix(in_srgb,var(--navy)28%,transparent),transparent_75%)] blur-2xl" />
 
             <div className="section-card relative overflow-hidden rounded-[2.5rem] p-6 md:p-8">
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <p className="text-xs font-black uppercase tracking-[0.28em] text-gold">
-                    Portrait
-                  </p>
-                  <p className="mt-2 text-sm font-semibold text-muted">
-                    Put a professional photo here (or a bold illustration).
-                  </p>
+              <div className="flex items-center justify-between gap-4">
+                <div className="flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_6px_rgba(52,211,153,0.8)]" />
+                  <p className="text-xs font-semibold text-muted">Open to opportunities</p>
                 </div>
                 <div className="rounded-full bg-gold/15 px-3 py-1 text-xs font-black text-gold">
-                  public/images/
+                  UCSB &apos;27
                 </div>
               </div>
 
               <div className="relative mt-6 aspect-square w-full overflow-hidden rounded-[2rem] border border-foreground/10 bg-fill-navy/10">
                 <Image
-                  src="/images/avatar-placeholder.svg"
-                  alt="Portrait placeholder"
+                  src="/images/mitulmarimuthu_headshot.jpg"
+                  alt="Mitul Marimuthu"
                   fill
                   priority
                   className="object-cover"
@@ -130,7 +131,6 @@ export default function Home() {
                 {[
                   { k: "Role", v: "AI + Software Engineer" },
                   { k: "Location", v: "San Jose, CA" },
-                  // { k: "Focus", v: "Agentic AI · Web Systems" },
                 ].map((item) => (
                   <div
                     key={item.k}
@@ -149,6 +149,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ── About ── */}
         <section id="about" className="scroll-mt-28 space-y-8">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div className="space-y-3">
@@ -156,12 +157,11 @@ export default function Home() {
                 About
               </p>
               <h2 className="text-balance text-3xl font-black tracking-tight text-foreground md:text-4xl">
-                Tell your story with confidence.
+                Builder. Engineer. Problem Solver.
               </h2>
             </div>
             <p className="max-w-xl text-sm leading-7 text-muted md:text-base">
-              This section is for your background: education, principles, what
-              you build, and what makes your taste distinctive.
+              UCSB Computer Science student shipping real impact across AI, web, and systems.
             </p>
           </div>
 
@@ -173,9 +173,12 @@ export default function Home() {
               <div className="space-y-4 text-sm leading-7 text-muted md:text-base">
                 <p>
                   University of California, Santa Barbara — B.S. in Computer
-                  Science (Grad: June 2027, GPA: 3.95/4.0). Relevant coursework:
-                  Data Structures & Algorithms, Computer Architecture, Operating
-                  Systems, Artificial Intelligence, Cryptography, and more.
+                  Science (Grad: June 2027, GPA: 3.95/4.0).
+                </p>
+                <p>
+                  Relevant coursework: Data Structures & Algorithms, Computer
+                  Architecture, Operating Systems, Artificial Intelligence,
+                  Cryptography, and more.
                 </p>
                 <p>
                   I focus on building agentic AI and data-driven web features end
@@ -193,91 +196,61 @@ export default function Home() {
             </div>
 
             <div className="space-y-6">
-              <PlaceholderBox title="Optional supporting image">
-                <p>
-                  Add something visual: a candid, workspace photo, diagram, or
-                  campus shot. Put the file in{" "}
-                  <span className="font-semibold text-foreground">
-                    public/images/
-                  </span>{" "}
-                  and embed it with{" "}
-                  <span className="font-semibold text-foreground">
-                    next/image
-                  </span>
-                  .
-                </p>
-              </PlaceholderBox>
-
               <div className="section-card rounded-3xl p-7 md:p-8">
-                <h3 className="text-lg font-black text-foreground">Skills</h3>
-                <p className="mt-2 text-sm text-muted">
-                  Core technical stack (swap/add as you grow).
-                </p>
-                <div className="mt-5 flex flex-wrap gap-2">
+                <h3 className="text-lg font-black text-foreground">By the numbers</h3>
+                <div className="mt-5 grid grid-cols-2 gap-3">
                   {[
-                    "Python",
-                    "TypeScript",
-                    "JavaScript",
-                    "React / Next.js",
-                    "SQL",
-                    "Flask",
-                    "MongoDB",
-                    "Supabase",
-                    "Docker",
-                    "LangChain",
-                    "LangGraph",
-                    "PyTorch",
-                    "Hugging Face",
-                  ].map((skill) => (
-                    <span
-                      key={skill}
-                      className="rounded-full border border-foreground/10 bg-background/40 px-3 py-2 text-xs font-bold text-foreground"
+                    { value: "3.95", label: "GPA at UCSB" },
+                    { value: "4", label: "Engineering roles" },
+                    { value: "250+", label: "PokerBots participants" },
+                    { value: "2027", label: "Expected graduation" },
+                  ].map((stat) => (
+                    <div
+                      key={stat.label}
+                      className="rounded-2xl border border-foreground/10 bg-background/40 p-4"
                     >
-                      {skill}
-                    </span>
+                      <p className="text-2xl font-black text-gold">{stat.value}</p>
+                      <p className="mt-1 text-xs font-semibold text-muted">{stat.label}</p>
+                    </div>
                   ))}
                 </div>
               </div>
+
+              <SkillsSection />
             </div>
           </div>
         </section>
 
+        {/* ── Projects ── */}
         <section id="projects" className="scroll-mt-28 space-y-8">
-          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <div className="space-y-3">
-              <p className="text-xs font-black uppercase tracking-[0.28em] text-gold">
-                Projects
-              </p>
-              <h2 className="text-balance text-3xl font-black tracking-tight text-foreground md:text-4xl">
-                Projects with real tradeoffs
-              </h2>
-            </div>
-            <PlaceholderBox title="Images: screenshot placeholders">
-              <p>
-                Upload your screenshots in <span className="font-semibold text-foreground">public/images/</span> and update
-                each project card&apos;s <span className="font-semibold text-foreground">imageSrc</span>. The current images use a generic placeholder.
-              </p>
-            </PlaceholderBox>
+          <div className="space-y-3">
+            <p className="text-xs font-black uppercase tracking-[0.28em] text-gold">
+              Projects
+            </p>
+            <h2 className="text-balance text-3xl font-black tracking-tight text-foreground md:text-4xl">
+              Projects with real tradeoffs
+            </h2>
           </div>
 
           <div className="grid gap-6 lg:grid-cols-2">
             <ProjectCard
               title="SpotiGraph"
               description="Built a SQL-backed system for 1,000+ Spotify listening records. Optimized queries to reduce retrieval time by 30%, improving user satisfaction by 20%, and added instant timeframe toggles with instant UI updates."
-              tech="Python · React · Next.js · SQL · Flask"
+              tech={["Python", "React", "Next.js", "SQL", "Flask"]}
               imageSrc="/images/project-placeholder.svg"
-              imageAlt="SpotiGraph screenshot placeholder"
+              imageAlt="SpotiGraph screenshot"
             />
             <ProjectCard
               title="BangEditor"
               description="Engineered an image transformation web app using Cloudinary to support 15+ cloud-based transformations. Created 10+ reusable UI components in TypeScript and designed a MongoDB schema for 500+ transformations to enable near-instant retrieval and state reverts."
-              tech="JavaScript · TypeScript · Next.js · Cloudinary · MongoDB"
+              tech={["JavaScript", "TypeScript", "Next.js", "Cloudinary", "MongoDB"]}
               imageSrc="/images/project-placeholder.svg"
-              imageAlt="BangEditor screenshot placeholder"
+              imageAlt="BangEditor screenshot"
             />
           </div>
         </section>
 
+        {/* ── Experience ── */}
         <section id="experience" className="scroll-mt-28 space-y-8">
           <div className="space-y-3">
             <p className="text-xs font-black uppercase tracking-[0.28em] text-gold">
@@ -294,7 +267,7 @@ export default function Home() {
                 title: "Software Engineering Intern · Yope",
                 meta: "Dec 2025 — March 2026 · Remote",
                 logoSrc: "/images/experience-logo-placeholder.svg",
-                logoAlt: "Yope logo — replace with /images/logos/yope.*",
+                logoAlt: "Yope",
                 bullets: [
                   "Ideated, prototyped, and delivered 3 core app features, driving a 30% increase in US download rates.",
                   "Owned milestone planning across a 5-person engineering team; compiled technical documentation and wrote OKRs, improving sprint velocity by 15%.",
@@ -305,7 +278,7 @@ export default function Home() {
                 title: "Software Engineering Intern · smartQED",
                 meta: "Jun 2025 — Sept 2025 · Remote",
                 logoSrc: "/images/experience-logo-placeholder.svg",
-                logoAlt: "smartQED logo — replace with /images/logos/smartqed.*",
+                logoAlt: "smartQED",
                 bullets: [
                   "Automated client onboarding and 2 core services via an AI agent, cutting average service time by 30%.",
                   "Implemented Retrieval-Augmented Generation (RAG) to search through 200+ client cases, reducing servicing costs for 30 new clients by 40%.",
@@ -316,7 +289,7 @@ export default function Home() {
                 title: "Technical Director · ACM (UCSB)",
                 meta: "Jan 2025 — Present · Santa Barbara, CA",
                 logoSrc: "/images/experience-logo-placeholder.svg",
-                logoAlt: "ACM logo — replace with /images/logos/acm-ucsb.*",
+                logoAlt: "ACM UCSB",
                 bullets: [
                   "Organized PokerBots, a school-wide poker AI agent competition with 250 participants and 7 industry guest speakers.",
                   "Developed a Next.js + Supabase realtime interface for contestants, supporting 80+ bots and 300+ spectators over 4 hours.",
@@ -327,7 +300,7 @@ export default function Home() {
                 title: "Software Engineering Director · AgentsSB",
                 meta: "Sept 2025 — Present · Santa Barbara, CA",
                 logoSrc: "/images/experience-logo-placeholder.svg",
-                logoAlt: "AgentsSB logo — replace with /images/logos/agentssb.*",
+                logoAlt: "AgentsSB",
                 bullets: [
                   "Directed a 6-person team to develop 4 AI-powered dashboards, leveraging agentic development environments to accelerate the product lifecycle by 50%.",
                   "Established a curriculum centralized on Claude Code and Codex subagents, enabling 60+ members to start deploying industry-level code.",
@@ -344,10 +317,8 @@ export default function Home() {
                       {job.meta}
                     </p>
                   </div>
-                  <div
-                    className="relative h-16 w-16 shrink-0 overflow-hidden rounded-2xl border border-dashed border-foreground/20 bg-background/50 sm:ml-auto"
-                    title="Drop a square-ish logo in public/images/logos/ and set logoSrc on this role"
-                  >
+                  {/* Logo slot — drop the real logo in public/images/logos/ and update logoSrc */}
+                  <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-2xl border border-foreground/10 bg-background/50 sm:ml-auto">
                     <Image
                       src={job.logoSrc}
                       alt={job.logoAlt}
@@ -370,6 +341,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ── Contact ── */}
         <section id="contact" className="scroll-mt-28 space-y-8">
           <div className="grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-start">
             <div className="space-y-4">
@@ -395,7 +367,7 @@ export default function Home() {
                   className="inline-flex items-center justify-center rounded-full bg-fill-navy px-6 py-3 text-sm font-black text-white shadow-[0_22px_60px_rgba(0,24,69,0.35)] transition hover:brightness-110"
                   href="mailto:mitul6m16apply@gmail.com"
                 >
-                  Email mitul6m16apply@gmail.com
+                  Email me
                 </a>
                 <a
                   className="inline-flex items-center justify-center rounded-full border border-foreground/15 bg-surface/70 px-6 py-3 text-sm font-black text-foreground transition hover:border-foreground/25"
@@ -416,66 +388,38 @@ export default function Home() {
               </div>
             </div>
 
-            <form className="section-card space-y-4 rounded-3xl p-7 md:p-8">
-              <div className="grid gap-4 sm:grid-cols-2">
-                <label className="space-y-2 text-sm font-semibold text-foreground">
-                  Name
-                  <input
-                    className="mt-2 w-full rounded-2xl border border-foreground/15 bg-background/40 px-4 py-3 text-sm text-foreground outline-none ring-gold/0 transition focus:ring-4"
-                    placeholder="Ada Lovelace"
-                    name="name"
-                    autoComplete="name"
-                  />
-                </label>
-                <label className="space-y-2 text-sm font-semibold text-foreground">
-                  Email
-                  <input
-                    className="mt-2 w-full rounded-2xl border border-foreground/15 bg-background/40 px-4 py-3 text-sm text-foreground outline-none ring-gold/0 transition focus:ring-4"
-                    placeholder="you@email.com"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                  />
-                </label>
-              </div>
-              <label className="block space-y-2 text-sm font-semibold text-foreground">
-                Message
-                <textarea
-                  className="mt-2 min-h-[140px] w-full rounded-2xl border border-foreground/15 bg-background/40 px-4 py-3 text-sm text-foreground outline-none ring-gold/0 transition focus:ring-4"
-                  placeholder="What are we building?"
-                  name="message"
-                />
-              </label>
-              <button
-                type="button"
-                className="w-full rounded-full bg-gold px-6 py-3 text-sm font-black text-on-gold shadow-[0_16px_40px_rgba(255,184,28,0.25)] transition hover:brightness-110"
-              >
-                Wire this button up (Formspree/API route)
-              </button>
-              <p className="text-xs leading-6 text-muted">
-                This form is intentionally non-submitting so you don’t deploy a
-                broken endpoint by accident.
-              </p>
-            </form>
+            <ContactForm />
           </div>
         </section>
 
         <footer className="border-t border-foreground/10 pt-10">
-          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <p className="text-sm text-muted">
-              Built with Next.js + Tailwind. Ready for{" "}
-              <span className="font-semibold text-foreground">Vercel</span>.
+              © 2026 Mitul Marimuthu · Built with Next.js + Tailwind
             </p>
-            <div className="flex flex-wrap gap-2">
-              <span className="rounded-full bg-foreground/5 px-3 py-2 text-xs font-bold text-foreground/70">
-                Tip: set your real metadata in{" "}
-                <span className="text-foreground">app/layout.tsx</span>
-              </span>
-              <span className="rounded-full bg-foreground/5 px-3 py-2 text-xs font-bold text-foreground/70">
-                Tip: add{" "}
-                <span className="text-foreground">public/resume.pdf</span> for
-                the resume button
-              </span>
+            <div className="flex items-center gap-5">
+              <a
+                href="https://linkedin.com/in/mitul-marimuthu"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm font-semibold text-muted transition hover:text-foreground"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://github.com/Mitul-Marimuthu"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm font-semibold text-muted transition hover:text-foreground"
+              >
+                GitHub
+              </a>
+              <a
+                href="/resume.pdf"
+                className="text-sm font-semibold text-muted transition hover:text-foreground"
+              >
+                Resume
+              </a>
             </div>
           </div>
         </footer>

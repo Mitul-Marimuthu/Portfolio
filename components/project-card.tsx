@@ -10,7 +10,7 @@ export function ProjectCard({
 }: {
   title: string;
   description: string;
-  tech: string;
+  tech: string[];
   imageSrc: string;
   imageAlt: string;
   href?: string;
@@ -36,9 +36,20 @@ export function ProjectCard({
           </span>
         </div>
         <p className="text-sm leading-6 text-muted">{description}</p>
-        <p className="text-xs font-semibold uppercase tracking-widest text-foreground/60">
-          {tech}
-        </p>
+        <div className="flex flex-wrap gap-1.5 pt-1">
+          {tech.map((t) => (
+            <span
+              key={t}
+              className="inline-flex items-center gap-1.5 rounded-full border border-foreground/10 bg-background/60 px-2.5 py-1 text-[0.7rem] font-semibold text-foreground/70 transition hover:border-gold/30 hover:bg-gold/5 hover:text-foreground"
+            >
+              {/* Logo slot — swap this span with <Image src={logoSrc} /> once you have the asset */}
+              <span className="inline-flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-full bg-foreground/10 text-[0.5rem] font-black leading-none text-foreground/40">
+                {t[0]}
+              </span>
+              {t}
+            </span>
+          ))}
+        </div>
       </div>
     </article>
   );

@@ -12,7 +12,7 @@ export function ContactForm() {
     e.preventDefault();
     const subject = encodeURIComponent(`Portfolio contact from ${name}`);
     const body = encodeURIComponent(`From: ${name} (${email})\n\n${message}`);
-    window.open(`mailto:mitul6m16apply@gmail.com?subject=${subject}&body=${body}`);
+    window.open(`mailto:mitul6m16@gmail.com?subject=${subject}&body=${body}`);
     setSent(true);
   }
 

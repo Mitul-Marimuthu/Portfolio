@@ -378,9 +378,9 @@ export default function Home() {
                 For collaborations, reach me at{" "}
                 <a
                   className="font-semibold text-foreground underline decoration-gold/60 underline-offset-4 hover:decoration-gold"
-                  href="mailto:mitul6m16apply@gmail.com"
+                  href="mailto:mitul6m16@gmail.com"
                 >
-                  mitul6m16apply@gmail.com
+                  mitul6m16@gmail.com
                 </a>{" "}
                 or connect via LinkedIn/GitHub below.
               </p>
@@ -388,7 +388,7 @@ export default function Home() {
               <div className="flex flex-col gap-3 sm:flex-row">
                 <a
                   className="inline-flex items-center justify-center rounded-full bg-fill-navy px-6 py-3 text-sm font-black text-white shadow-[0_22px_60px_rgba(0,24,69,0.35)] transition hover:brightness-110"
-                  href="mailto:mitul6m16apply@gmail.com"
+                  href="mailto:mitul6m16@gmail.com"
                 >
                   Email me
                 </a>

@@ -11,6 +11,8 @@ const categories = [
 ];
 
 const skills = [
+  { name: "C++", category: "languages" },
+  { name: "Java", category: "languages" },
   { name: "Python", category: "languages" },
   { name: "TypeScript", category: "languages" },
   { name: "JavaScript", category: "languages" },
@@ -25,6 +27,7 @@ const skills = [
   { name: "LangGraph", category: "ai" },
   { name: "PyTorch", category: "ai" },
   { name: "Hugging Face", category: "ai" },
+  { name: "Scikit-learn", category: "ai" },
 ];
 
 export function SkillsSection() {

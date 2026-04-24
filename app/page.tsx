@@ -182,15 +182,14 @@ export default function Home() {
                 </p>
                 <p>
                   I focus on building agentic AI and data-driven web features end
-                  to end—turning prototypes into shipped product work. My
+                  to end - turning prototypes into shipped product work. My
                   approach is always outcome-first: faster onboarding, cheaper
                   retrieval, and fewer user friction points backed by real data.
                 </p>
                 <p>
                   In leadership roles, I build teams and learning paths: organizing
-                  PokerBots with 250 participants (and a Next.js + Supabase
-                  realtime competition interface), and directing agentic dashboard
-                  development to accelerate the product lifecycle by 50%.
+                  PokerBots with 250 participants, and directing teams through production
+                  in a way that prioritizes learning and ownership. 
                 </p>
               </div>
             </div>
@@ -234,6 +233,13 @@ export default function Home() {
 
           <div className="grid gap-6 lg:grid-cols-2">
             <ProjectCard
+              title="NFLNews"
+              description="Built a news aggregator web app for NFL fans using Python, HTML, and Flask. Implemented a chatbot to act as a personalized team analyst, delivering real-time insights and updates."
+              tech={["Python", "Flask", "HTML", "CSS", "Gemini 2.0"]}
+              imageSrc="/images/project-placeholder.svg"
+              imageAlt="NFLNews screenshot"
+            />
+            <ProjectCard
               title="SpotiGraph"
               description="Built a SQL-backed system for 1,000+ Spotify listening records. Optimized queries to reduce retrieval time by 30%, improving user satisfaction by 20%, and added instant timeframe toggles with instant UI updates."
               tech={["Python", "React", "Next.js", "SQL", "Flask"]}
@@ -246,6 +252,13 @@ export default function Home() {
               tech={["JavaScript", "TypeScript", "Next.js", "Cloudinary", "MongoDB"]}
               imageSrc="/images/project-placeholder.svg"
               imageAlt="BangEditor screenshot"
+            />
+            <ProjectCard
+              title="Nuzzy"
+              description="Engineered a full-stack web app that recieves .nds/.gba ROMs, extracts game data with Python scripts, and visualizes Pokemon teams. Implemented an Agent to research and create a competitive strategy guide for the next battle in the game."
+              tech={["Python", "JavaScript", "Typescript", "React", "Groq", "Anthropic"]}
+              imageSrc="/images/project-placeholder.svg"
+              imageAlt="Nuzzy screenshot"
             />
           </div>
         </section>
@@ -263,6 +276,16 @@ export default function Home() {
 
           <div className="grid gap-5">
             {[
+              {
+                title: "Technical Consultant · Polymarket",
+                meta: "Fill in dates · Fill in location",
+                logoSrc: "/images/experience-logo-placeholder.svg",
+                logoAlt: "Polymarket",
+                bullets: [
+                  "Conducted 100+ user interviews and analyzed product usage data to idenitify key 5 friction points, leading to a 25% increase in user retention.",
+                  "Prototyped and shipped lines and odds for 3 new markets, resulting in a 20% increase in daily active users.",
+                ],
+              },
               {
                 title: "Software Engineering Intern · Yope",
                 meta: "Dec 2025 — March 2026 · Remote",
